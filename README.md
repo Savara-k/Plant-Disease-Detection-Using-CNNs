@@ -11,7 +11,7 @@ images using the PlantVillage dataset to determine which visual features are mos
 
 ---
 
-#Executive Summary
+### Executive Summary
 Early detection of plant diseases is crucial for agriculture, especially where expert diagnosis is unavailable. While CNNs can automate disease detection, it is unclear how much visual information can be removed from images before model performance degrades.
 
 This project investigates whether CNNs require:
@@ -30,7 +30,7 @@ Three identical CNN models were trained on different versions of the same datase
 Results show that removing color and texture significantly reduces model accuracy, highlighting the importance of chromatic cues such as yellowing, spotting, and discoloration.
 
 ---
-##Research Objective
+## Research Objective
 
 * To determine which visual features — color, texture, or shape — are most important for CNN-based plant disease detection.
 Dataset
@@ -38,7 +38,7 @@ Dataset
 * Over 20,000 leaf images across 15 crops and 38 diseases
 
 ---
-#Reorganized into a binary classification task:
+## Reorganized into a binary classification task:
 
 * Classification Task
 * Healthy
@@ -46,7 +46,7 @@ Dataset
 * A held-out test set of 4,128 images was reserved for evaluation to ensure generalization to unseen data.
 ---
 
-#Methodology:
+## Methodology:
 
 * Preprocessing
 * Images resized to uniform resolution
@@ -54,7 +54,7 @@ Dataset
 * Identical train/validation splits across experiments
 
 ---
-#Model Architectures:
+## Model Architectures:
 
 All experiments used the same CNN architecture to isolate the effect of input representation.
 
@@ -78,7 +78,7 @@ All experiments used the same CNN architecture to isolate the effect of input re
 * Identical optimization settings
 
 ---
-#Evaluation Metrics:
+## Evaluation Metrics:
 
 * Accuracy
 * Precision
@@ -87,9 +87,9 @@ All experiments used the same CNN architecture to isolate the effect of input re
 These metrics provide a balanced assessment, particularly for detecting diseased samples.
 
 --
-#Results:
+## Results:
 
-#RGB CNN Performance (Best)
+## RGB CNN Performance (Best)
 
 * Training Accuracy: ~95%
 * Validation Accuracy: ~93%
@@ -97,7 +97,7 @@ These metrics provide a balanced assessment, particularly for detecting diseased
 
 The RGB model consistently achieved the highest performance, indicating that color information is critical for disease detection. Many plant diseases produce distinct chromatic patterns such as yellowing, brown lesions, and discoloration.
 
-#Grayscale CNN Performance
+## Grayscale CNN Performance
 
 * Training Accuracy: ~91%
 * Validation Accuracy: ~86%
@@ -105,7 +105,7 @@ The RGB model consistently achieved the highest performance, indicating that col
 
 While still effective, removing color information reduced performance. The model relied on texture and intensity patterns but struggled with subtle disease signals.
 
-#Edge-Detection CNN Performance (Weakest)
+## Edge-Detection CNN Performance (Weakest)
 
 * Training Accuracy: ~94%
 * Validation Accuracy: ~79%
@@ -118,29 +118,29 @@ Comparative Performance
 
 ---
 
-#Performance hierarchy:
+## Performance hierarchy:
 
 RGB CNN > Grayscale CNN > Edge-Detection CNN
 Simplifying image data reduces diagnostic information and harms model performance in agricultural tasks.
 
-#Key Insights
+## Key Insights
 
 * Color cues are the most important features for plant disease detection
 * Texture contributes but cannot replace color
 * Shape alone is insufficient
 * Removing information to simplify data can reduce model effectiveness
-* 
+ 
 CNNs require rich visual detail to capture disease-specific patterns.
 
 ---
 
-#Conclusion
+## Conclusion
 This study demonstrates that preserving color and texture is essential for CNN-based plant disease detection. Simplified representations such as grayscale or edge maps remove critical diagnostic features and reduce accuracy.
 The RGB model achieved the strongest performance, confirming that chromatic information is central to identifying plant diseases.
 
 ---
 
-#Future Work
+## Future Work
 * Evaluate models on real-world field images
 * Apply transfer learning (ResNet, EfficientNet)
 * Experiment with heavy data augmentation
@@ -148,16 +148,17 @@ The RGB model achieved the strongest performance, confirming that chromatic info
 
 --- 
 
-#Technical Stack
+## Technical Stack
 * Python
 * TensorFlow / Keras
 * NumPy / Pandas
 * Matplotlib
 
 ---
-#What This Project Demonstrates
+## What This Project Demonstrates
 * CNN implementation for image classification
 * Controlled experimental design
 * Comparative analysis of preprocessing techniques
+  
 Model evaluation using multiple metrics
 Understanding of feature importance in deep learning
