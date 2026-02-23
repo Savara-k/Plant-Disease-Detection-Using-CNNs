@@ -2,7 +2,7 @@
 
 RGB vs. Grayscale vs. Edge-Based Image Representations
 
-A machine learning study evaluating how different image preprocessing techniques affect Convolutional Neural Network (CNN) performance in plant disease detection. This project compares three input representations RGB color images, grayscale images,edge-detected images using the PlantVillage dataset to determine which visual features are most critical for accurate disease classification.
+A machine learning study evaluating how different image preprocessing techniques affect Convolutional Neural Network (CNN) performance in plant disease detection. This project compares three input representations RGB color images, grayscale images, and edge-detected images using the PlantVillage dataset to determine which visual features are most critical for accurate disease classification.
 
 ---
 
