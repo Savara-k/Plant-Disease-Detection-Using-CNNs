@@ -86,7 +86,8 @@ All experiments used the same CNN architecture to isolate the effect of input re
 * F1-score
 These metrics provide a balanced assessment, particularly for detecting diseased samples.
 
---
+---
+
 ## Results:
 
 ## RGB CNN Performance (Best)
